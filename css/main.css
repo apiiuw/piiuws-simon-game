@@ -1,0 +1,251 @@
+@font-face {
+  font-family: Calc;
+  src: url(calc.woff);
+}
+
+html,
+body,
+div {
+  -webkit-user-select: none;
+}
+
+.container {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  margin: 2% auto;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 30px 0 white;
+}
+
+.buttons {
+  position: relative;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.buttons .button {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+  transition: 0.2s;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons .button:active {
+  box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons__button_green {
+  top: 20px;
+  left: 20px;
+  background-color: rgb(40, 200, 40);
+  border-radius: 100% 0 0 0;
+}
+.buttons__button_green.active {
+  background-color: rgb(10, 255, 10);
+}
+
+.buttons__button_red {
+  top: 20px;
+  left: 240px;
+  background-color: rgb(200, 40, 40);
+  border-radius: 0 100% 0 0;
+}
+.buttons__button_red.active {
+  background-color: rgb(255, 10, 10);
+}
+
+.buttons__button_blue {
+  top: 240px;
+  left: 240px;
+  background-color: rgb(40, 150, 200);
+  border-radius: 0 0 100% 0;
+}
+.buttons__button_blue.active {
+  background-color: rgb(10, 204, 255);
+}
+
+.buttons__button_yellow {
+  top: 240px;
+  left: 20px;
+  background-color: rgb(200, 200, 40);
+  border-radius: 0 0 0 100%;
+}
+.buttons__button_yellow.active {
+  background-color: rgb(255, 255, 10);
+}
+
+.central {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 135px;
+  left: 120px;
+  background: linear-gradient(to top, #5a5a5a, #d4d4d4);
+  border: 20px solid black;
+  border-radius: 100%;
+  z-index: 10;
+  box-shadow: 0px 0px 20px 0 black, inset 0px 0px 10px 0 black;
+}
+.central__logo {
+  width: 180px;
+  height: 80px;
+  margin: 10px 10px 5px;
+  background-color: black;
+  border-radius: 180px 180px 0 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.central__logo p {
+  margin: 0;
+  padding: 20px;
+}
+
+.central__board {
+  width: 176px;
+  height: 95px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 0 0 180px 180px;
+}
+
+.central__start,
+.central__strict {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -2px -2px 5px 2px, inset rgba(255, 255, 255, 0.5) 2px 2px 5px 2px, 1px 1px 1px rgba(255, 255, 255, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+.central__start:active,
+.central__strict:active {
+  box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -2px -2px 5px 2px, inset rgba(255, 255, 255, 0.5) 2px 2px 5px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.central__start {
+  top: 100px;
+  left: 25px;
+  background-color: rgb(220, 20, 20);
+}
+.central__start:after {
+  content: "start";
+  position: absolute;
+  top: 25px;
+}
+.central__start:active {
+  background-color: rgb(200, 0, 0);
+}
+.central__strict {
+  top: 100px;
+  left: 70px;
+  background-color: rgb(220, 220, 20);
+}
+.central__strict:after {
+  content: "strict";
+  position: absolute;
+  top: 25px;
+}
+.central__strict_led {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 28px;
+  background-color: #51070d;
+  border-radius: 100%;
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -1px -1px 2px 1px, inset rgba(255, 255, 255, 0.5) 1px 1px 2px 2px;
+}
+.central__strict_led.active {
+  background-color: #b81d09;
+}
+.central__strict:active {
+  background-color: rgb(200, 200, 0);
+}
+
+.central__switch {
+  position: absolute;
+  top: 105px;
+  left: 110px;
+}
+.central__switch-label {
+  position: relative;
+  display: inline-block;
+  margin-left: 35px;
+}
+.central__switch-label::before,
+.central__switch-label::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.central__switch-label::before {
+  top: 0;
+  left: -35px;
+  width: 30px;
+  height: 24px;
+  background-color: #3c3c3c;
+  border: 1px solid black;
+  border-radius: 20%;
+}
+.central__switch-label::after {
+  top: 2px;
+  left: -32px;
+  width: 12px;
+  height: 20px;
+  background-color: red;
+  border: 1px solid #5a5a5a;
+  border-radius: 20%;
+  transition: 0.2s;
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -1px -1px 2px 1px, inset rgba(255, 255, 255, 0.5) 1px 1px 2px 2px, 1px 1px 1px rgba(255, 255, 255, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.5);
+}
+.central__switch-input {
+  display: none;
+}
+.central__switch-input:checked ~ label::after {
+  transform: translateX(13px);
+}
+
+.display {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  left: 70px;
+  top: 145px;
+  font-size: 28px;
+  font-family: "Calc";
+  text-align: center;
+  background-color: #3b030e;
+  border: 5px solid black;
+  box-shadow: 2px 2px 3px 0 grey, inset -1px -1px 1px grey, -1px -1px 1px grey;
+}
+
+.display__back {
+  position: absolute;
+  color: #51070d;
+}
+
+.display__front {
+  position: absolute;
+  color: #b81d09;
+  text-shadow: 0 0 15px #b81d09;
+}

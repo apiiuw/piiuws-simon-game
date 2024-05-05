@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Piuw's | Simon Game</title>
+    <meta name="description" content="Play a Simon Game" />
+    <meta name="viewport" content="width=500" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="central">
+        <div class="central__logo"><p>SIMON</p></div>
+        <div class="central__board">
+          <div class="central__start" id="start"></div>
+          <div class="central__strict" id="strict">
+            <div class="central__strict_led" id="strict_led"></div>
+          </div>
+          <div class="central__switch">
+            <label for="switch" class="central__switch-label_off">off</label>
+            <input type="checkbox" class="central__switch-input" id="switch" />
+            <label for="switch" class="central__switch-label">on</label>
+          </div>
+          <div class="display">
+            <div class="display__back">88</div>
+            <div class="display__front" id="display__counter"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons clearfix">
+        <div class="buttons__button_green button"></div>
+        <div class="buttons__button_red button"></div>
+        <div class="buttons__button_yellow button"></div>
+        <div class="buttons__button_blue button"></div>
+      </div>
+      <div class="frame"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
